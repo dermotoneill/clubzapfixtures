@@ -72,6 +72,8 @@ public class DCBFixture {
 			}
 			
 		}
+		System.out.println("PROBLEM WITH ROW:"+row.toString());
+		System.out.println("PROBLEM WITH COMPETITION:"+getClubZapCompetitionName() + " CODE:"+getCode());
 		return null;
 	}
 
@@ -126,6 +128,7 @@ public class DCBFixture {
 			new ClubZapTeam("2006 Boys-U15 Football-Thomas Ashe", new String[] { "Football" }, "Thomas Ashe",new String[] { "U15" }),
 			new ClubZapTeam("2006 Boys-U15 Hurling", new String[] { "Hurling" }, "St Finians", new String[] { "U15" }),
 			new ClubZapTeam("2007 Boys-U14 Hurling", new String[] { "Hurling" }, "St Finians", new String[] { "U14" }),
+			new ClubZapTeam("2007 Boys-U14 Football-Thomas Ashe", new String[] { "Football" }, "Thomas Ashe", new String[] { "U14" }),
 			new ClubZapTeam("2007 Girls-U14", new String[] { "LGFA","Camogie" }, "St Finians", new String[] { "U14" }),
 			new ClubZapTeam("2008 Boys-U13 Football-Thomas Ashe", new String[] { "Football" }, "Thomas Ashe",new String[] { "U13" }),
 			new ClubZapTeam("2008 Boys-U13 Hurling", new String[] { "Hurling" }, "St Finians", new String[] { "U13" }),
