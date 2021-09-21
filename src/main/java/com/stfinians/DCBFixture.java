@@ -115,10 +115,15 @@ public class DCBFixture {
 	}
 
 	public Date getDate() throws ParseException {
+		try {
 		String dateValue = row.getCell(columnIndex.get("date")).getStringCellValue();
 		DateFormat format = new SimpleDateFormat("dd.MM.yyyy", Locale.ENGLISH);
 		Date date = format.parse(dateValue);
 		return date;
+		} catch(Exception e) {
+			System.out.println("PROBLEM WITH DATE:"+row);
+		}
+		return null;
 	}
 
 	List<ClubZapTeam> ClubZapTeams = Arrays.asList(
@@ -144,7 +149,7 @@ public class DCBFixture {
 			new ClubZapTeam("2013 Boys-U8", new String[] { "Football","Hurling"  }, "St Finians", new String[] { "U8" }),
 			new ClubZapTeam("2013 Girls-U8",new String[] {"LGFA","Camogie"  }, "St Finians", new String[] { "U8" }),
 			new ClubZapTeam("2014 Boys-U7",new String[] { "Football","Hurling"  }, "St Finians", new String[] { "U7" }),
-			new ClubZapTeam("2014 Girls-U7", new String[] {"LGFA","Camogie"  }, "St Finians", new String[] { "U7" }),
+			new ClubZapTeam("2014 Girls-U7", new String[] {"LGFA","Camogie","Both"  }, "St Finians", new String[] { "U7" }),
 			new ClubZapTeam("Adult Camogie",new String[] {"Camogie" }, "St Finians", new String[] { "Junior","Intermediate","Senior","Adult" }),
 			new ClubZapTeam("Adult Football 1 (AFL 5)", new String[] { "Football" }, "St Finians", new String[] { "Junior","Intermediate","Senior","Adult"}),
 			new ClubZapTeam("Adult Football 2 (AFL 8)", new String[] { "Football" }, "St Finians", new String[] { "Junior","Intermediate","Senior","Adult"}),
