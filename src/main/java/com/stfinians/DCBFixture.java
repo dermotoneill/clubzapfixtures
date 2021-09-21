@@ -121,7 +121,7 @@ public class DCBFixture {
 		Date date = format.parse(dateValue);
 		return date;
 		} catch(Exception e) {
-			System.out.println("PROBLEM WITH DATE:"+row);
+			System.out.println("PROBLEM WITH DATE IN ROW:"+row.getRowNum());
 		}
 		return null;
 	}

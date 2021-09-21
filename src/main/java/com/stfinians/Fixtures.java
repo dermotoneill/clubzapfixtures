@@ -9,8 +9,15 @@ import org.apache.poi.ss.usermodel.Row;
 public class Fixtures {
 	List<Fixture> fixtures =new ArrayList<Fixture>();
 
-	public void addRow(Row row) throws ParseException {
-		fixtures.add(new Fixture(row));
+	public void addRow(Row row) {
+		
+		try {
+			fixtures.add(new Fixture(row));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("PROBLEM WITH ROW:"+row);
+		}
 	}
 	
 	public String getClubZapFixturesCSVTemplate() {

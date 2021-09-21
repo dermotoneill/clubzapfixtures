@@ -21,8 +21,10 @@ public class App {
 				for (int rowNum = 0; rowNum <= rowEnd; rowNum++) {
 					Row row = sheet.getRow(rowNum);
 					if (rowNum >= arguments.getRowNum() - 1) {
+						if(row!=null && !row.toString().trim().equals("")) {
 						Fixture fixture = new Fixture(row);
 						fixtures.addFixture(fixture);
+						}
 					}
 				}
 			}
